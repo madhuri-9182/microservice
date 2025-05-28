@@ -42,4 +42,4 @@ jobs:
           --platform=managed \
           --region=${{ secrets.REGION }} \
           --allow-unauthenticated
-         # --service-account=${{ secrets.GCP_SERVICE_KEY }}
+      # --service-account=${{ secrets.GCP_SERVICE_KEY }}
