@@ -30,8 +30,6 @@ jobs:
     - name: Build & Push Docker image
       run: |
         Docker build -t ${{ secrets.REGION }}-docker.pkg.dev/${{ secrets.PROJECT_ID }}/${{ secrets.REPO_NAME }}/node-app:latest .
- 
-      run: | 
         Docker push ${{ secrets.REGION }}-docker.pkg.dev/${{ secrets.PROJECT_ID }}/${{ secrets.REPO_NAME }}/node-app:latest
 
 
