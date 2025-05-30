@@ -17,11 +17,12 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
 
-    - id: auth
+    - name: Authentication to google Cloud
+      id: auth
       uses: google-github-actions/auth@v2
       with:
         token_format: 'access_token'
-        workload_identity_provider: 'projects/981221757308/locations/global/workloadIdentityPools/github-pool/providers/github-provider'
+        workload_identity_provider: 'projects/981221757308/locations/global/workloadIdentityPools/github-pool/providers/github'
         service_account: 'github@hdip-platform.iam.gserviceaccount.com'
 
     - name: Set up gcloud CLI
