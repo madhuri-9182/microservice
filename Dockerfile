@@ -29,7 +29,7 @@ COPY --from=builder /app/babel.config.js ./
 
 # Expose application port
 #EXPOSE 3000
-EXPOSE 8080
+#EXPOSE 8080
 
 # Start the application
 CMD ["node", "server.js"]
