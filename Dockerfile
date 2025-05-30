@@ -21,6 +21,7 @@ WORKDIR /app
 # Copy only the necessary files from builder
 COPY --from=builder /app/package.json ./
 COPY --from=builder /app/package-lock.json ./
+COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/server.js ./
 COPY --from=builder /app/*.jsx ./
 COPY --from=builder /app/public ./public
