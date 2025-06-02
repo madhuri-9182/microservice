@@ -46,6 +46,11 @@ jobs:
           --image=${{ secrets.REGION }}-docker.pkg.dev/${{ secrets.PROJECT_ID }}/${{ secrets.REPO_NAME }}/node-app:latest \
           --platform=managed \
           --region=${{ secrets.REGION }} \
-          --allow-unauthenticated
+          --no-allow-unauthenticated
       #--port=3000
       # --service-account=${{ secrets.GCP_SERVICE_KEY }}
+    - name: Generate ID Token and Curl the URL
+      run: |
+        ID_TOKEN=$(gcloud auth print-identity-token)
+        curl -H "Authorization: Bearer $ID_TOKEN" \
+        https://node-app-981221757308.asia-south1.run.app
