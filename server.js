@@ -45,7 +45,7 @@ app.use(
 // Enable CORS for localhost:5173
 app.use(
   cors({
-    origin: "http://localhost:5173", // Allow only from localhost:5173
+    origin: "https://node-app-981221757308.asia-south1.run.app", // Allow only from localhost:5173
     methods: ["GET", "POST", "PUT", "DELETE"], // Allowed HTTP methods
     allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
   })
