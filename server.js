@@ -288,7 +288,7 @@ app.post("/generate-receipt-pdf", async (req, res) => {
   }
 });
 
-app.get("/generate-receipt-pdf", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Send a POST request to this endpoint with receipt data to generate a PDF.");
 });
 
