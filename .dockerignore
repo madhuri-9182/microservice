@@ -1,5 +1,2 @@
-.git
-.gitignore
-*.log
 npm-debug.log
 README.md
