@@ -46,7 +46,6 @@ jobs:
           --image=${{ secrets.REGION }}-docker.pkg.dev/${{ secrets.PROJECT_ID }}/${{ secrets.REPO_NAME }}/node-app:latest \
           --platform=managed \
           --region=${{ secrets.REGION }} \
-          --no-allow-unauthenticated
-      #--port=3000
-      # --service-account=${{ secrets.GCP_SERVICE_KEY }}
+          --no-allow-authenticated
+          --port=3000
     
