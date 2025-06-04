@@ -1,2 +1,12 @@
 npm-debug.log
 README.md
+.git
+.gitignore
+npm-debug.log
+yarn-error.log
+
+# Ignore dev config files
+Dockerfile
+.dockerignore
+*.log
+
