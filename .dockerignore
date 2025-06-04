@@ -1,11 +1,10 @@
 npm-debug.log
+node_modules
 README.md
 .git
 .gitignore
-npm-debug.log
 yarn-error.log
-
-# Ignore dev config files
+*.vscode
 Dockerfile
 .dockerignore
 *.log
