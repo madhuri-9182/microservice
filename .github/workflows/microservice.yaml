@@ -22,8 +22,10 @@ jobs:
       uses: google-github-actions/auth@v2
       with:
         token_format: 'access_token'
-        workload_identity_provider: 'projects/981221757308/locations/global/workloadIdentityPools/github-pool/providers/github'
-        service_account: 'github@hdip-platform.iam.gserviceaccount.com'
+        #workload_identity_provider: 'projects/981221757308/locations/global/workloadIdentityPools/github-pool/providers/github'
+        workload_identity_provider: 'projects/568722140219/locations/global/workloadIdentityPools/github-pool/providers/github'
+        #service_account: 'github@hdip-platform.iam.gserviceaccount.com'
+        service_account: 'github-actions@dynamic-now-438707-c1.iam.gserviceaccount.com'
 
     - name: Set up gcloud CLI
       uses: google-github-actions/setup-gcloud@v1
@@ -47,5 +49,5 @@ jobs:
           --platform=managed \
           --region=${{ secrets.REGION }} \
           --no-allow-unauthenticated
-      #--port=3000
+          --port=3000
     
