@@ -26,6 +26,7 @@ jobs:
         workload_identity_provider: 'projects/568722140219/locations/global/workloadIdentityPools/github-pool/providers/github'
         #service_account: 'github@hdip-platform.iam.gserviceaccount.com'
         service_account: 'github-actions@dynamic-now-438707-c1.iam.gserviceaccount.com'
+        
 
     - name: Set up gcloud CLI
       uses: google-github-actions/setup-gcloud@v1
@@ -48,6 +49,6 @@ jobs:
           --image=${{ secrets.REGION }}-docker.pkg.dev/${{ secrets.PROJECT_ID }}/${{ secrets.REPO_NAME }}/node-app:latest \
           --platform=managed \
           --region=${{ secrets.REGION }} \
-          --no-allow-unauthenticated
+          --no-allow-unauthenticated \
           --port=3000
     
